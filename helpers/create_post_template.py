@@ -14,7 +14,7 @@ date_stamp = datetime.today().strftime('%Y-%m-%d-%H:%M')
 date_str = datetime.today().strftime('%Y-%m-%d')
 
 # Define the file name
-filename = f"Content/_posts/{date_str}-{slug}.md"
+filename = f"blog-it-when-its-hot/_posts/{date_str}-{slug}.md"
 
 # Jekyll blog post template
 post_content = f"""---
@@ -32,7 +32,7 @@ published: false
 """
 
 # Ensure _posts directory exists
-os.makedirs("Content/_posts", exist_ok=True)
+os.makedirs("blog-it-when-its-hot/_posts", exist_ok=True)
 
 # Write the file
 with open(filename, "w", encoding="utf-8") as file:
