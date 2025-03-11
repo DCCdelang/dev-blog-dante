@@ -1,0 +1,136 @@
+  /* Additional CSS styling */
+$base-font-family: "Roboto", sans-serif !default;
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+  /* Navigation container */
+  .nav-box {
+    width: 100%; /* Full width */
+    max-width: 250px; /* Limit menu width */
+    background-color: #222; /* Dark background */
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between menu items */
+  }
+  
+  .nav-box-mobile {
+    display: none;
+  }
+  
+  /* Style for each menu link */
+  .page-link {
+    display: block;
+    background-color: #333; /* Slightly lighter than the menu background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Hover effect */
+  .page-link:hover {
+    background-color: #555; /* Lighter gray on hover */
+  }
+  
+  /* Active page highlight */
+  .page-link.active {
+    font-weight: bold;
+  }
+
+  .container {
+    display: flex;
+    gap: 20px; /* Adds spacing between columns */
+    padding-top:80px
+  }
+  
+  .main-content {
+    flex: 2; /* Takes up more space */
+  }
+  
+  .sidebar {
+    padding-right: 40px;
+    width: 100%; /* Full width or adjust as needed */
+    max-width: 250px; /* Limit menu width */
+    flex: 1; /* Takes up less space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between nav and footer */
+  }
+  
+.site-header{
+    position: fixed;
+    width: 100%;
+    min-height: 55.95px;
+    line-height: 54px;
+    background-color: #181818;
+    border-top: 0px;
+    border-bottom: 1px solid rgb(63.75, 63.75, 63.75);
+}
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .page-link {
+        display: block;
+        background-color: #333; /* Slightly lighter than the menu background */
+        color: #fff; /* White text */
+        padding: 0px;
+        text-align: center;
+        font-size: 16px;
+      }
+
+    .site-header {
+        text-align: center;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+
+    .vertical-menu {
+        display: none;
+      }
+  
+    .nav-box {
+        display: none;
+      }
+
+    .nav-box-mobile {
+        display: block;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Space between menu items */
+      }
+
+    .nav-box-mobile details > summary{
+        list-style: none;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+  .container {
+    display: flex;
+    gap: 20px; /* Adds spacing between columns */
+    padding-top:80px
+  }
+    
+    .footer-col-wrapper {
+        display: none;
+    }
+      
+    .sidebar {
+        display: none;
+    }
+  }
+

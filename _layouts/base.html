@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  {%- include head.html -%}
+  
+  <body>
+
+    {%- include header.html -%}
+
+    <div class="container">
+      <main class="main-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        
+        <div class="nav-box">
+          {% for page in site.pages %}
+            {% if page.title %}
+              <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {%- include footer.html -%} <!-- Footer inside sidebar -->
+      </aside>
+    </div>
+
+    {%- include sub-footer.html -%}
+
+  </body>
+</html>
