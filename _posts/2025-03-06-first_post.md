@@ -6,6 +6,7 @@ categories: post, blog
 published: true
 ---
 ## Why did I set up a blog
+
 Greetings visitor!
 
 Rolling into the adulting work life I face decisions and difficulties that are in some part very common but sometimes unique and challenging. To clear up my mind and improve the articulation of these challenges I have decided to (b)log the challenges I face and the solutions I think to have found. 

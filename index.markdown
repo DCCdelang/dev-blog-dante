@@ -6,5 +6,5 @@ layout: home
 ---
 ## Welcome!
 
-You have found yourself on my personal blog site. This is an environment for me to share knowledge and express my creativity.
+You have arrived on my personal blog site. This is an environment for me to share knowledge and express my creativity.
 
