@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Profile, experience and projects
+title: Professional experience
 permalink: /CV/
 ---
 
@@ -28,20 +28,3 @@ Skilled and enthusiastic data scientist with a strong foundation in AI and stoch
 ### Data Scientist | Yabba Data Doo
 #### February 2023 – March 2023
     • Created insights in sales numbers using Azure functions and Python API
-
-## PROJECTS
-### Github Pages
-#### January 2025 – Current
-Personal project setting up a tech blog
-site using Jekyll and Github Pages.
-
-### Hackathon AI Agents
-#### October 2024 – November 2024
-Capgemini GDSC using AWS Sagemaker and Agentic AI to create insights in UNESCO reading scores worldwide.
-Master Thesis – Institute of Advanced Studies
-November 2021 – August 2022
-Research on segregation on neighbourhood and primary school level using an Agent Based Model in Python.
-
-### Bachelor Thesis – ABN AMRO
-#### March 2020 – June 2020
-Research determining the resilience of IT systems by classifying incident data using  k-NN and SVM.	
