@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Profile, experience and projects
 permalink: /CV/
 ---
