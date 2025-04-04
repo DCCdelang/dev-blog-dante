@@ -10,21 +10,21 @@ Skilled and enthusiastic data scientist with a strong foundation in AI and stoch
 ## EXPERIENCE
 ### Data Scientist | Capgemini
 #### June 2023 – Present 
-    • Data Science community, organized bi-weekly knowledge bites and social events
-    • Young Professional event board, organized monthly drinks and weekend for I&D department
+- Data Science community, organized bi-weekly knowledge bites and social events
+- Young Professional event board, organized monthly drinks and weekend for I&D department
 
 ### Data Consultant | Gemeente Amsterdam (Via Capgemini)
 #### September 2024 – Present
-    • Migration project to a central Microsoft Azure data platform
-    • Build gold and silver layer views in Databricks
-    • Responsible for PowerBI reporting, data models and deployment
+- Migration project to a central Microsoft Azure data platform
+- Build gold and silver layer views in Databricks
+- Responsible for PowerBI reporting, data models and deployment
 
 ### Data Analyst | ABN AMRO (Via Capgemini)
 #### August 2023 – September 2024
-    • Streamlined KYC planning and release management
-    • Build an ETL pipeline using Python, SQL and Azure Synapse
-    • Direct responsibility for stakeholder management
+- Streamlined KYC planning and release management
+- Build an ETL pipeline using Python, SQL and Azure Synapse
+- Direct responsibility for stakeholder management
 
 ### Data Scientist | Yabba Data Doo
 #### February 2023 – March 2023
-    • Created insights in sales numbers using Azure functions and Python API
+- Created insights in sales numbers using Azure functions and Python API
