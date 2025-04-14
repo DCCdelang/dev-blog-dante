@@ -10,7 +10,7 @@ description: >-
   It serves as a digital garden for my ideas and projects.
   Feel free to explore and connect with me through the links below.
 
-baseurl: "/dev-blog-dante" # the subpath of your site, e.g. /blog
+# baseurl: "/dev-blog-dante" # the subpath of your site, e.g. /blog
 url: "https://dccdelang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
@@ -18,10 +18,8 @@ url: "https://dccdelang.github.io" # the base hostname & protocol for your site,
 # As of November 2023, GitHub Pages still uses Minima 2.5.1 (https://pages.github.com/versions/). 
 # If you want to use the latest Minima version on GitHub Pages, use the following setting and 
 
-# If you clone the Minima repo and build locally, use this setting.
+# If you clone the Minima repo and build locally, use the remote_theme.
 # theme: minima
-
-# add a line comment on "theme: minima" above.
 remote_theme: jekyll/minima
 
 plugins:
