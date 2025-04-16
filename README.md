@@ -4,6 +4,6 @@ This repository contains my personal blog site. With this blog I aim to share my
 
 This site is based on Jekyll minima and is hosted by github pages.
 
-Content will be added sporatically and consist of both technical topics as side hobby's.
+Content will be added sporadically and consist of both technical topics and projects as other interests.
 
 Hope u enjoy!
