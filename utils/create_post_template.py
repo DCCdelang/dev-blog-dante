@@ -13,7 +13,7 @@ date_stamp = datetime.today().strftime('%Y-%m-%d-%H:%M')
 date_str = datetime.today().strftime('%Y-%m-%d')
 
 # Define the file name
-filename = f"dev-blog-github/_posts/{date_str}-{slug}.md"
+filename = f"_posts/{date_str}-{slug}.md"
 
 # Jekyll blog post template
 post_content = f"""---
