@@ -2,7 +2,6 @@
 layout: post
 title:  The first post
 date:   2025-03-06 20:55:37 +0100
-categories: post, blog
 published: true
 ---
 

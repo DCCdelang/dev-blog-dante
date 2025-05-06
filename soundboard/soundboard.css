@@ -1,0 +1,12 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+button {
+    width: 50%;
+    height: 30pt;
+    margin-top: 7pt;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}

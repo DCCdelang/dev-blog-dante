@@ -25,13 +25,11 @@ tags: []
 published: false
 ---
 
-# {title}
-
 
 """
 
 # Ensure _posts directory exists
-os.makedirs("dev-blog-github/_posts", exist_ok=True)
+os.makedirs("_posts", exist_ok=True)
 
 # Write the file
 with open(filename, "w", encoding="utf-8") as file:
