@@ -1,9 +1,8 @@
 <header class="site-header">
   <div class="header-wrapper">
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
-  </div>
-    
-    <div class="nav-box-mobile">
+
+    <nav class="site-nav">
       <details>
         <summary>Menu</summary>
         {% for page in site.pages %}
@@ -12,5 +11,17 @@
           {% endif %}
         {% endfor %}
       </details>
-    </div>
+    </nav>
+  </div>
+    
+    <!-- <div class="nav-box-mobile">
+      <details>
+        <summary>Menu</summary>
+        {% for page in site.pages %}
+          {% if page.title %}
+            <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </details>
+    </div> -->
 </header>
