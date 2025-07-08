@@ -7,7 +7,6 @@ permalink: /projects/
 ### [API use cases](https://github.com/DCCdelang/API-applications) (Private repo)
 #### April 2025
 Project to understand API's better and work on possible usecases.
-Connecting API's for applications
 
 ### [Blogsite](https://github.com/DCCdelang/dev-blog-dante) (this one)
 #### January 2025 – Current
