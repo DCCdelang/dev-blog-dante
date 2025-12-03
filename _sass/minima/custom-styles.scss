@@ -1,23 +1,23 @@
   /* Additional CSS styling */
 $base-font-family: "Roboto", sans-serif !default;
-$background-color-site: #0F4C5C !default;
-$font-color: #ffffff !default;
-$background-color-header: #5F0F40 !default;
-$background-color-menu: #d68b00 !default;
+// $background-color-site: #003441 !default;
+// $font-color: #ffffff !default;
+// $background-color-header: #00439b !default;
+// $background-color-menu: #00d60b !default;
 
 body {
     font-family: 'Georgia', sans-serif;
-    background-color: $background-color-site;
-    color: $font-color;
+    // background-color: $background-color-site;
+    // color: $font-color;
 }
 
   /* Navigation container */
   // .nav-box {
   //   width: 100%; /* Full width */
   //   max-width: 250px; /* Limit menu width */
-  //   // background-color: #222; /* Dark background */
-  //   // border-radius: 10px;
-  //   // padding: 10px;
+  //   background-color: #222; /* Dark background */
+  //   border-radius: 10px;
+  //   padding: 10px;
   //   overflow: hidden;
   //   display: flex;
   //   flex-direction: column; /* Stack items vertically */
@@ -28,7 +28,7 @@ body {
     float: right;
     position: absolute;
     top: 0;
-    background: $background-color-menu;
+    // background: $background-color-menu;
   }
   
   .nav-box-mobile {
@@ -83,7 +83,7 @@ body {
     width: 100%;
     min-height: 55.95px;
     line-height: 54px;
-    background-color: $background-color-header;
+    // background-color: $background-color-header;
     border-top: 0px;
     // border-bottom: 1px solid rgb(63.75, 63.75, 63.75);
 }
@@ -113,79 +113,79 @@ body {
 
 }
 
-  /* Responsive adjustments */
-  @media (max-width: 640px) {
-    .page-link {
-        display: block;
-        // background-color: #333; /* Slightly lighter than the menu background */
-        padding: 1px 15px;
-        text-align: center;
-        font-size: 16px;
-        margin: 10px auto;
-      }
-
-    .site-header {
-        // text-align: center;
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-
-    .vertical-menu {
-        display: none;
-      }
-  
-    .nav-box {
-        display: none;
-      }
-
-    .nav-box-mobile {
-        // display: block;
-        // flex-direction: column;
-        border-radius: 10px;
-        padding: 8px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px; /* Space between menu items */
-      }
-
-    .nav-box-mobile details > summary{
-        list-style: none;
-        text-align: center;
-        padding: 8px 0;
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .page-link {
+      display: block;
+      // background-color: #333; /* Slightly lighter than the menu background */
+      padding: 1px 15px;
+      text-align: center;
+      font-size: 16px;
+      margin: 10px auto;
     }
 
-    .container {
-      display: flex;
-      gap: 20px; /* Adds spacing between columns */
-      padding-top: 160px
-    }
-      
-    .footer-col-wrapper {
-        display: none;
-    }
-      
-    .sidebar {
-        display: none;
-    }
-
-    .main-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 30px;
-      display: flex;
-    }
-
-    .site-title {
-      font-size: 1.625rem;
-      font-weight: 300;
-      letter-spacing: -1px;
-      margin-bottom: 0;
-      float: none;
-      padding: 0px;
+  .site-header {
+      // text-align: center;
+      display: block;
+      justify-content: space-between;
+      align-items: center;
     }
     
+
+  .vertical-menu {
+      display: none;
+    }
+
+  .nav-box {
+      display: none;
+    }
+
+  .nav-box-mobile {
+      // display: block;
+      // flex-direction: column;
+      border-radius: 10px;
+      padding: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      gap: 10px; /* Space between menu items */
+    }
+
+  .nav-box-mobile details > summary{
+      list-style: none;
+      text-align: center;
+      padding: 8px 0;
   }
+
+  .container {
+    display: flex;
+    gap: 20px; /* Adds spacing between columns */
+    padding-top: 160px
+  }
+    
+  .footer-col-wrapper {
+      display: none;
+  }
+    
+  .sidebar {
+      display: none;
+  }
+
+  .main-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+  }
+
+  .site-title {
+    font-size: 1.625rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: none;
+    padding: 0px;
+  }
+  
+}
 
