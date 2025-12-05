@@ -3,14 +3,11 @@
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 
     <nav class="site-nav">
-      <details>
-        <summary>Menu</summary>
         {% for page in site.pages %}
-          {% if page.title %}
+          {% if page.title and page.nav_exclude != true %}
             <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
-      </details>
     </nav>
   </div>
     

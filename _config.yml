@@ -43,13 +43,11 @@ minima:
   # be rendered.
   nav_pages:
     - about.md
-    - portfolio.md
     - projects.md
     - CV.md
 
   header_pages:
     - about.md
-    - portfolio.md
     - projects.md
     - CV.md
 
