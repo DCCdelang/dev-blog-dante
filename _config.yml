@@ -87,3 +87,4 @@ keep_files:
 # Exclude files and directories from the build process.
 exclude:
   - utils
+  - vendor
