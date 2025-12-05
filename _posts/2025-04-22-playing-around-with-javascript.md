@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Playing around with javascript"
-date: 2025-04-22-16:51
+date: 2025-04-22 16:51:37 +0100
 categories: []
 tags: []
 published: False

@@ -9,8 +9,9 @@ title = input("Enter the blog post title: ").strip()
 slug = re.sub(r'\W+', '-', title.lower()).strip('-')
 
 # Get today's date
-date_stamp = datetime.today().strftime('%Y-%m-%d-%H:%M')
-date_str = datetime.today().strftime('%Y-%m-%d')
+now = datetime.now()
+date_str = now.strftime('%Y-%m-%d')
+date_stamp = now.strftime('%Y-%m-%d %H:%M:%S %z')
 
 # Define the file name
 filename = f"_posts/{date_str}-{slug}.md"
