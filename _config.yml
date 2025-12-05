@@ -17,9 +17,10 @@ url: "https://dccdelang.github.io" # the base hostname & protocol for your site,
 
 # As of November 2023, GitHub Pages still uses Minima 2.5.1 (https://pages.github.com/versions/). 
 # If you want to use the latest Minima version on GitHub Pages, use the following setting
-theme: minima
+# theme: minima
+
 # If you clone the Minima repo and build locally, use the remote_theme.
-# remote_theme: jekyll/minima@1e8a445
+remote_theme: jekyll/minima@1e8a445
 
 plugins:
   - jekyll-feed
@@ -71,9 +72,6 @@ minima:
    - title: Github repository for this site
      icon: github
      url: "https://github.com/DCCdelang/dev-blog-dante"
-  #  - title: Jekyll at X (formerly Twitter)
-  #    icon: x-twitter
-  #    url: "https://x.com/jekyllrb"
 
 # Minima specific settings, which are only available from Minima 3.0 onward.
 # See https://github.com/jekyll/minima/issues/815 for more details.
