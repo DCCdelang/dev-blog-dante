@@ -16,10 +16,9 @@ url: "https://dccdelang.github.io" # the base hostname & protocol for your site,
 # Build settings
 
 # As of November 2023, GitHub Pages still uses Minima 2.5.1 (https://pages.github.com/versions/). 
-# If you want to use the latest Minima version on GitHub Pages, use the following setting and 
-
-# If you clone the Minima repo and build locally, use the remote_theme.
+# If you want to use the latest Minima version on GitHub Pages, use the following setting
 theme: minima
+# If you clone the Minima repo and build locally, use the remote_theme.
 # remote_theme: jekyll/minima@1e8a445
 
 plugins:
