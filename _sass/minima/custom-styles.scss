@@ -1,123 +1,79 @@
-/* Additional CSS styling */
-$base-font-family: "Roboto", sans-serif !default;
+/* ============================================
+   CUSTOM STYLES & THEME CONFIGURATION
+   ============================================ */
+
+/* ============================================
+   VARIABLES: COLOR SCHEMES
+   ============================================ */
 
 /* Light mode colors */
 [data-color-scheme="light"] {
-  --background-color: #f5edd4;
-  --text-color: #1e1e1e;
-  --link-hover-color: #472ce0;
-  --link-color: #2d1b8a;
-  --border-color: #e8e8e8;
-  --title-color: #1e1e1e;
-  --heading-color: #2d2d2d;
-  --code-bg-color: #f0f0f0;
-  --code-text-color: #333333;
+  --background-color: #fafaf8;
+  --heading-color: #1a1a1a;
+  --link-color: #0066cc;
+  --link-hover-color: #0052a3;
+  --border-color: #e0e0e0;
+  --title-color: #1a1a1a;
+  --text-color: #333333;
+  --code-bg-color: #f5f5f5;
+  --code-text-color: #2d2d2d;
 }
 
 /* Dark mode colors (default) */
 [data-color-scheme="dark"] {
-  --background-color: #1e1e1e;
-  --text-color: #f5edd4;
-  --link-color: #4da6ff;
-  --link-hover-color: #7ac9ff;
-  --border-color: #404040;
-  --title-color: #f5edd4;
+  --background-color: #0f0f0f;
   --heading-color: #e8e8e8;
-  --code-bg-color: #2d2d2d;
-  --code-text-color: #e8e8e8;
+  --link-color: #58a6ff;
+  --link-hover-color: #79c0ff;
+  --border-color: #30363d;
+  --title-color: #e8e8e8;
+  --text-color: #c9d1d9;
+  --code-bg-color: #161b22;
+  --code-text-color: #79c0ff;
 }
 
-// Apply link colors with hover effect
-a {
-  color: var(--link-color);
-  transition: color 0.2s ease;
-}
+/* ============================================
+   GLOBAL BASE STYLES
+   ============================================ */
 
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
+html {
+  background-color: transparent;
 }
 
 body {
-    font-family: 'Georgia', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-  /* Navigation container */
-  .site-nav {
-    float: right;
-    position: absolute;
-    width: 100%;
-    max-width: 640px;
-    overflow: hidden;
-    flex-direction: column;
-    gap: 10px;
-  }
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
 
-  .nav-box-mobile {
-    display: none;
-  }
-  
-  /* Style for each menu link */
-  .page-link {
-    color: var(--link-color)  !important;
-    text-decoration: none;
-    margin-right: 20px;
-    text-align: right;
-    font-size: 16px;
-  }
+/* ============================================
+   LINKS & TEXT
+   ============================================ */
 
-  .page-link:hover {
+a {
+  color: var(--link-color);
+  transition: color 0.2s ease;
+
+  &:hover {
     color: var(--link-hover-color);
+    text-decoration: underline;
   }
-
-  /* Active page highlight */
-  .page-link.active {
-    font-weight: bold;
-  }
-
-  .container {
-    display: flex;
-    gap: 20px;
-    padding-top: 80px
-  }
-  
-  .main-content {
-    flex: 2;
-  }
-  
-  .sidebar {
-    padding-right: 40px;
-    width: 100%;
-    max-width: 250px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-.site-header {
-    position: fixed;
-    width: 100%;
-    min-height: 55.95px;
-    line-height: 54px;
-    border-top: 0px;
-    top: 0;
-    z-index: 1000;
 }
 
-main.page-content {
-    flex: 1;
-}
+/* ============================================
+   LAYOUT: WRAPPERS & CONTAINERS
+   ============================================ */
 
-.footer-col-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
+.container {
+  display: flex;
+  gap: 20px;
+  padding-top: 80px;
 }
 
 .main-wrapper {
@@ -131,6 +87,46 @@ main.page-content {
   padding: 0 30px;
 }
 
+.footer-col-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main.page-content {
+  flex: 1;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.sidebar {
+  padding-right: 40px;
+  width: 100%;
+  max-width: 250px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  min-height: 55.95px;
+  line-height: 54px;
+  border-top: none;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
 .site-title {
   color: var(--title-color) !important;
   font-size: 1.625rem;
@@ -138,8 +134,42 @@ main.page-content {
   letter-spacing: -1px;
   margin-bottom: 0;
   float: none;
-  padding: 0px;
+  padding: 0;
 }
+
+.site-nav {
+  float: right;
+  position: absolute;
+  width: 100%;
+  max-width: 640px;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-box-mobile {
+  display: none;
+}
+
+.page-link {
+  color: var(--link-color) !important;
+  text-decoration: none;
+  margin-right: 20px;
+  text-align: right;
+  font-size: 16px;
+
+  &:hover {
+    color: var(--link-hover-color);
+  }
+
+  &.active {
+    font-weight: bold;
+  }
+}
+
+/* ============================================
+   FOOTER & CREDITS
+   ============================================ */
 
 .site-footer {
   border-top: none;
@@ -148,6 +178,35 @@ main.page-content {
   flex-shrink: 0;
 }
 
+.footer-credits {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
+  padding-top: 5px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #0077aa;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ============================================
+   POST STYLING
+   ============================================ */
+
 .post-header {
   margin-bottom: 30px;
   padding-bottom: 18px;
@@ -155,119 +214,59 @@ main.page-content {
   border-bottom: none;
 }
 
-.footer-credits {
-  text-align: center;
-  font-size: 12px;
-  margin-top: 5;
-  padding-top: 5px;
-  color: #666;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.footer-credits p {
-  margin: 0;
-}
-
-.footer-credits .theme-toggle {
-  display: inline-block;
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-credits a {
-  color: #0077aa;
-  text-decoration: none;
-}
-
-.footer-credits a:hover {
-  text-decoration: underline;
-}
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
 
 .theme-toggle {
-  // display: none;
   background: none;
   border: none;
-  // color: white;
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
   margin-left: 10px;
 }
 
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.footer-credits .theme-toggle {
+  display: inline-block;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 640px) {
+/* ============================================
+   RESPONSIVE DESIGN (Mobile & Tablet)
+   ============================================ */
+
+@media (max-width: 600px) {
   .theme-toggle {
     display: block;
   }
+
   .page-link {
-      display: block;
-      padding: 1px 15px;
-      text-align: center;
-      font-size: 16px;
-    }
-
-  .site-header {
-      display: block;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-  .vertical-menu {
-      display: none;
-    }
-
-  .nav-box {
-      display: none;
-    }
+    display: block;
+    padding: 1px 15px;
+    text-align: center;
+    font-size: 16px;
+  }
 
   .site-nav {
-      padding: 8px;
-      overflow: hidden;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-  .container {
     display: flex;
-    gap: 20px;
-    padding-top: 160px
-  }
-    
-  .footer-col-wrapper {
-      display: none;
-  }
-    
-  .sidebar {
-      display: none;
-  }
-
-  .main-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
+    flex-direction: row;
+    right: 0px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
   }
 
   .site-title {
+    display: none;
     font-size: 1.625rem;
     font-weight: 300;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: none;
-    padding: 0px;
+    padding: 0;
   }
 }

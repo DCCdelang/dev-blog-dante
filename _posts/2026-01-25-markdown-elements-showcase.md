@@ -4,7 +4,7 @@ title: "Markdown Elements Showcase"
 date: 2026-01-25 11:00:00 +0100
 categories: [tutorial, reference]
 tags: [markdown, jekyll, examples]
-published: true
+published: false
 ---
 
 ## Headings

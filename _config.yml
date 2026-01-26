@@ -1,4 +1,4 @@
-title: Dante's Dev Blog
+title: Dante's dev blog
 author:
   name: Dante de Lang
   email: dccdelang@outlook.com
@@ -6,9 +6,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >-
-  This is a personal blog where I share my notes and thoughts on various topics.
-  It serves as a digital garden for my ideas and projects.
-  Feel free to explore and connect with me through the links below.
+
 
 baseurl: "/dev-blog-dante" # the subpath of your site, e.g. /blog
 url: "https://dccdelang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
