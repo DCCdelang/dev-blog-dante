@@ -11,7 +11,6 @@ I am an experienced Data Scientist with years experience a strong foundation in 
 Below is a list of the projects and clients I have worked with.
 
 
-### Capgemini
 #### Data Scientist @ Nationale-Nederlanden *(via Capgemini)*
 August 2025 - January 2026
 - Created API webapp for insurance claim fraud check on internal and external databases
@@ -29,13 +28,12 @@ August 2023 – September 2024
 - Build ETL pipelines using Python, SQL and Azure Synapse
 - Build PBI reports for higher management stakeholders
 
-#### Consultant Data Science @ Capgemini
+#### Data Scientist @ Capgemini
 June 2023 – January 2026 
 - Young-Professional event board, responsible for organizing social events, bi-weekly knowledge sessions and monthly drinks
 - Developed POC for closed documents LLM RAG solution using OpenAI at Capgemini AI lab
 - Supervised Machine Learning Thesis intern
 
-### Yabba Data Doo
-#### Data Scientist
+#### Data Scientist @ Yabba Data Doo
 February 2023 – March 2023
 - Empowered sales with live insights using Azure functions and Python API

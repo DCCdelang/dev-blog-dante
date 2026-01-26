@@ -1,9 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
   const themeToggle = document.querySelector('.theme-toggle');
   const htmlElement = document.documentElement;
+  const siteHeader = document.querySelector('.site-header');
   
   // Get saved theme or default to 'auto'
   const savedTheme = localStorage.getItem('theme') || 'auto';
+  
+  // Hide header on scroll
+  let lastScrollTop = 0;
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      siteHeader.classList.add('hide');
+    } else {
+      // Scrolling up
+      siteHeader.classList.remove('hide');
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
   
   // Set initial theme
   applyTheme(savedTheme);

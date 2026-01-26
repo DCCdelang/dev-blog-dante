@@ -125,6 +125,12 @@ main.page-content {
   justify-content: space-between;
   align-items: center;
   background-color: var(--background-color);
+  top: 0;
+  transition: top 0.3s ease-in-out;
+}
+
+.site-header.hide {
+  top: -55.95px;
 }
 
 .site-title {
@@ -258,6 +264,8 @@ main.page-content {
     background-color: transparent;
     border: none;
     border-radius: 5px;
+    justify-content: center;
+    text-align: center;
   }
 
   .site-title {
