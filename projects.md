@@ -1,16 +1,19 @@
 ---
-layout: post
+layout: page
 title: Projects
 permalink: /projects/
+hide_title: true
+published: false
 ---
 
 ### [API use cases](https://github.com/DCCdelang/API-applications) (Private repo)
-#### April 2025
-Project to understand API's better and work on possible usecases.
+> #### April 2025
+> Project to understand API's better and work on possible usecases.
 
 ### [Blogsite](https://github.com/DCCdelang/dev-blog-dante) (this one)
-#### January 2025 – Current
-Project setting up a tech blog site using Jekyll, Python and Github Pages.
+> #### January 2025 – Current
+> Project setting up a tech blog site using Jekyll, Python and Github Pages.
+
 
 ### Hackathon AI Agents
 #### October 2024 – November 2024

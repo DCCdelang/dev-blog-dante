@@ -1,0 +1,176 @@
+---
+layout: post
+title: "HTML Elements Showcase"
+date: 2026-01-25 12:00:00 +0100
+categories: [tutorial, reference]
+tags: [html, jekyll, examples]
+published: true
+---
+
+<h2>Headings</h2>
+<p>This section demonstrates different heading levels.</p>
+
+<h3>Heading Level 3</h3>
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5>
+<h6>Heading Level 6</h6>
+
+<h2>Text Formatting</h2>
+<p>This is a paragraph with <strong>bold text</strong>, <em>italic text</em>, and <u>underlined text</u>.</p>
+<p>You can also use <code>inline code</code> for technical terms.</p>
+<p><small>This is small text.</small></p>
+<p><mark>This text is highlighted</mark>.</p>
+
+<h2>Lists</h2>
+
+<h3>Unordered List</h3>
+<ul>
+  <li>First item</li>
+  <li>Second item
+    <ul>
+      <li>Nested item 1</li>
+      <li>Nested item 2</li>
+    </ul>
+  </li>
+  <li>Third item</li>
+</ul>
+
+<h3>Ordered List</h3>
+<ol>
+  <li>First step</li>
+  <li>Second step
+    <ol>
+      <li>Sub-step A</li>
+      <li>Sub-step B</li>
+    </ol>
+  </li>
+  <li>Third step</li>
+</ol>
+
+<h2>Blockquote</h2>
+<blockquote>
+  <p>"The best time to plant a tree was 20 years ago. The second best time is now." - Chinese Proverb</p>
+</blockquote>
+
+<h2>Code Blocks</h2>
+<pre><code class="language-html">&lt;div class="example"&gt;
+  &lt;p&gt;This is example HTML code&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+<pre><code class="language-python">def hello_world():
+    print("Hello, World!")
+    return True</code></pre>
+
+<h2>Horizontal Rule</h2>
+<hr />
+
+<h2>Tables</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Row 1, Col 1</td>
+      <td>Row 1, Col 2</td>
+      <td>Row 1, Col 3</td>
+    </tr>
+    <tr>
+      <td>Row 2, Col 1</td>
+      <td>Row 2, Col 2</td>
+      <td>Row 2, Col 3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Links and Buttons</h2>
+<p><a href="https://example.com">This is a link</a></p>
+<p><a href="mailto:dccdelang@outlook.com">Send me an email</a></p>
+<button onclick="alert('Button clicked!')">Click Me</button>
+
+<h2>Images</h2>
+<p>To add images, place them in the <code>assets/images/</code> folder:</p>
+<img src="{{ '/assets/images/example.jpg' | relative_url }}" alt="Example Image" style="max-width: 100%; height: auto;">
+
+<h2>DIV Containers with Styling</h2>
+<div style="background-color: #f0f0f0; padding: 20px; border-radius: 5px; margin: 20px 0;">
+  <p><strong>Info Box:</strong> This is a styled container using inline CSS.</p>
+</div>
+
+<div style="background-color: #ffe6e6; padding: 15px; border-left: 4px solid #ff0000; margin: 20px 0;">
+  <p><strong>Warning:</strong> This is a warning box with a colored left border.</p>
+</div>
+
+<div style="background-color: #e6ffe6; padding: 15px; border-left: 4px solid #00aa00; margin: 20px 0;">
+  <p><strong>Success:</strong> This is a success message box.</p>
+</div>
+
+<h2>Definition List</h2>
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language - Used to structure web pages</dd>
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets - Used to style web pages</dd>
+  <dt>JavaScript</dt>
+  <dd>A programming language for interactive web pages</dd>
+</dl>
+
+<h2>Forms</h2>
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Enter your name" />
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email" />
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+  
+  <button type="submit">Submit</button>
+</form>
+
+<h2>Embedded Content</h2>
+<p>You can embed videos from YouTube:</p>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2>Custom Styles</h2>
+<style>
+  .highlight {
+    background-color: yellow;
+    padding: 5px;
+  }
+  .custom-box {
+    border: 2px solid #3498db;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+</style>
+
+<div class="custom-box">
+  <p>This box uses a custom CSS class defined in the post.</p>
+  <p>You can style any <span class="highlight">element</span> with custom CSS.</p>
+</div>
+
+<h2>Span and Semantic Elements</h2>
+<p>
+  <strong>Bold text</strong> for importance,
+  <em>italic text</em> for emphasis,
+  <mark>highlighted text</mark> for attention,
+  <code>code snippet</code> for technical content,
+  <del>strikethrough text</del> for removed content,
+  <ins>inserted text</ins> for additions.
+</p>
+
+<h2>Abbreviations and Inline Elements</h2>
+<p>The <abbr title="World Wide Web">WWW</abbr> was invented by <abbr title="Tim Berners-Lee">TBL</abbr>.</p>
+<p>This is a <sup>superscript</sup> and this is a <sub>subscript</sub>.</p>
+
+<hr />
+<p style="text-align: center; color: #666; font-size: 0.9em;">
+  That's a comprehensive showcase of HTML elements you can use in your Jekyll posts!
+</p>

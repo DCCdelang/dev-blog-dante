@@ -1,7 +1,7 @@
-title: Dante's notes
+title: Dante's Dev Blog
 author:
-  name: DCCdelang
-  email: your-email@domain.com
+  name: Dante de Lang
+  email: dccdelang@outlook.com
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
@@ -36,23 +36,26 @@ minima:
   # solarized-light	   Light variant of solarized color scheme.
   # solarized-dark	   Dark variant of solarized color scheme.
   # solarized	         Adaptive skin for solarized color scheme skins.
-  skin: dark
+  skin: auto
 
   # If you want to link only specific pages in the site-navigation, use this and list
   # the `path` property (as represented via Liquid) of the pages in the order they should
   # be rendered.
   nav_pages:
     - about.md
-    - projects.md
+    - categories.md
     - CV.md
 
   header_pages:
     - about.md
-    - projects.md
+    - categories.md
     - CV.md
 
   # Set to `true` to show excerpts on the homepage.
   show_excerpts: true
+
+  # Safe mode for GitHub Pages
+  safe: false
 
   # Minima date format.
   # The default value is "%b %d, %Y" (e.g. Nov 14, 2023) 
@@ -70,6 +73,9 @@ minima:
    - title: Github repository for this site
      icon: github
      url: "https://github.com/DCCdelang/dev-blog-dante"
+   - title: LinkedIn Profile
+     icon: linkedin
+     url: "https://www.linkedin.com/in/dante-de-lang"
 
 # Minima specific settings, which are only available from Minima 3.0 onward.
 # See https://github.com/jekyll/minima/issues/815 for more details.

@@ -1,31 +1,63 @@
-  /* Additional CSS styling */
+/* Additional CSS styling */
 $base-font-family: "Roboto", sans-serif !default;
-// $background-color-site: #003441 !default;
-// $font-color: #ffffff !default;
-// $background-color-header: #00439b !default;
-// $background-color-menu: #00d60b !default;
+
+/* Light mode colors */
+[data-color-scheme="light"] {
+  --background-color: #f5edd4;
+  --text-color: #1e1e1e;
+  --link-hover-color: #472ce0;
+  --link-color: #2d1b8a;
+  --border-color: #e8e8e8;
+  --title-color: #1e1e1e;
+  --heading-color: #2d2d2d;
+  --code-bg-color: #f0f0f0;
+  --code-text-color: #333333;
+}
+
+/* Dark mode colors (default) */
+[data-color-scheme="dark"] {
+  --background-color: #1e1e1e;
+  --text-color: #f5edd4;
+  --link-color: #4da6ff;
+  --link-hover-color: #7ac9ff;
+  --border-color: #404040;
+  --title-color: #f5edd4;
+  --heading-color: #e8e8e8;
+  --code-bg-color: #2d2d2d;
+  --code-text-color: #e8e8e8;
+}
+
+// Apply link colors with hover effect
+a {
+  color: var(--link-color);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
 
 body {
     font-family: 'Georgia', sans-serif;
-    // background-color: $background-color-site;
-    // color: $font-color;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
   /* Navigation container */
   .site-nav {
     float: right;
     position: absolute;
-    width: 100%; /* Full width */
-    max-width: 640px; /* Limit menu width */
-    // background-color: #222; /* Dark background */
-    // border-radius: 10px;
-    // padding: 10px;
+    width: 100%;
+    max-width: 640px;
     overflow: hidden;
-    // display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 10px; /* Space between menu items */
+    flex-direction: column;
+    gap: 10px;
   }
-
 
   .nav-box-mobile {
     display: none;
@@ -33,22 +65,17 @@ body {
   
   /* Style for each menu link */
   .page-link {
-    // display: block;
-    // background-color: #333; /* Slightly lighter than the menu background */
-    color: #fff; /* White text */
+    color: var(--link-color)  !important;
     text-decoration: none;
-    // padding: 12px 15px;
     margin-right: 20px;
-    // border-radius: 5px;
     text-align: right;
     font-size: 16px;
   }
-  
-  // /* Hover effect */
-  // .page-link:hover {
-  //   background-color: #555; /* Lighter gray on hover */
-  // }
-  
+
+  .page-link:hover {
+    color: var(--link-hover-color);
+  }
+
   /* Active page highlight */
   .page-link.active {
     font-weight: bold;
@@ -56,35 +83,39 @@ body {
 
   .container {
     display: flex;
-    gap: 20px; /* Adds spacing between columns */
-    padding-top:80px
+    gap: 20px;
+    padding-top: 80px
   }
   
   .main-content {
-    flex: 2; /* Takes up more space */
+    flex: 2;
   }
   
   .sidebar {
     padding-right: 40px;
-    width: 100%; /* Full width or adjust as needed */
-    max-width: 250px; /* Limit menu width */
-    flex: 1; /* Takes up less space */
+    width: 100%;
+    max-width: 250px;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Adds spacing between nav and footer */
+    gap: 20px;
   }
   
-.site-header{
+.site-header {
     position: fixed;
     width: 100%;
     min-height: 55.95px;
     line-height: 54px;
-    // background-color: $background-color-header;
     border-top: 0px;
-    // border-bottom: 1px solid rgb(63.75, 63.75, 63.75);
+    top: 0;
+    z-index: 1000;
 }
 
-.footer-col-wrapper{
+main.page-content {
+    flex: 1;
+}
+
+.footer-col-wrapper {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -99,38 +130,101 @@ body {
   max-width: 800px;
   padding: 0 30px;
 }
+
 .site-title {
+  color: var(--title-color) !important;
   font-size: 1.625rem;
   font-weight: 300;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: none;
   padding: 0px;
-
 }
 
 .site-footer {
   border-top: none;
+  margin-top: auto;
+  width: 100%;
+  flex-shrink: 0;
 }
+
+.post-header {
+  margin-bottom: 30px;
+  padding-bottom: 18px;
+  text-align: center;
+  border-bottom: none;
+}
+
+.footer-credits {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5;
+  padding-top: 5px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-credits p {
+  margin: 0;
+}
+
+.footer-credits .theme-toggle {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-credits a {
+  color: #0077aa;
+  text-decoration: none;
+}
+
+.footer-credits a:hover {
+  text-decoration: underline;
+}
+
+.theme-toggle {
+  // display: none;
+  background: none;
+  border: none;
+  // color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
+  .theme-toggle {
+    display: block;
+  }
   .page-link {
       display: block;
-      // background-color: #333; /* Slightly lighter than the menu background */
       padding: 1px 15px;
       text-align: center;
       font-size: 16px;
-      // margin: 10px auto;
     }
 
   .site-header {
-      // text-align: center;
       display: block;
       justify-content: space-between;
       align-items: center;
     }
-    
 
   .vertical-menu {
       display: none;
@@ -141,25 +235,15 @@ body {
     }
 
   .site-nav {
-      // display: block;
-      // flex-direction: column;
-      // border-radius: 10px;
       padding: 8px;
       overflow: hidden;
-      // display: flex;
-      flex-direction: column; /* Stack items vertically */
-      gap: 10px; /* Space between menu items */
+      flex-direction: column;
+      gap: 10px;
     }
-
-  // .nav-box-mobile details > summary{
-  //     list-style: none;
-  //     text-align: center;
-  //     padding: 8px 0;
-  // }
 
   .container {
     display: flex;
-    gap: 20px; /* Adds spacing between columns */
+    gap: 20px;
     padding-top: 160px
   }
     
@@ -186,6 +270,4 @@ body {
     float: none;
     padding: 0px;
   }
-  
 }
-

@@ -1,32 +1,41 @@
 ---
-layout: post
-title: Professional experience
-permalink: /CV/
+layout: page
+title: Experience
+permalink: /cv/
+hide_title: true
+published: True
 ---
 
-## PROFILE
-Skilled and enthusiastic data scientist with a strong foundation in AI and BI. My experience in consulting helps me to quickly identify problems and align solutions with stakeholder needs. As a natural connector, I enjoy bringing people together. I’m passionate about collaborative problem-solving, continuous learning, and professional growth.
+I am an experienced Data Scientist with years experience a strong foundation in AI and BI. My experience in consulting helps me to quickly identify problems and align solutions with stakeholder needs. As a natural connector, I enjoy bringing people together. I’m passionate about collaborative problem-solving, continuous learning, and professional growth.
 
-## EXPERIENCE
+Below is a list of the projects and clients I have worked with.
 
-### Data Consultant | Gemeente Amsterdam (Via Capgemini)
-#### September 2024 – Present
+
+### Capgemini
+#### Data Scientist @ Nationale-Nederlanden *(via Capgemini)*
+August 2025 - January 2026
+- Created API webapp for insurance claim fraud check on internal and external databases
+- Build batch pipeline  
+
+#### Data Analyst @ Gemeente Amsterdam *(via Capgemini)*
+September 2024 – July 2025
 - Improved reporting on citizen services by combining insights
 - Created views and data models in Databricks with SQL
 - Improved security for internal reporting by implementing RLS in Azure en PowerBI
 
-### Data Analyst | ABN AMRO (Via Capgemini)
-#### August 2023 – September 2024
+#### Data Scientist @ ABN AMRO *(via Capgemini)*
+August 2023 – September 2024
 - Optimized workforce planning through reporting and forecasting
 - Build ETL pipelines using Python, SQL and Azure Synapse
 - Build PBI reports for higher management stakeholders
 
-### Data Scientist | Capgemini
-#### June 2023 – Present 
-- Data Science community, organized bi-weekly knowledge bites and     • ember of Young-Professional event board, responsible for social events such as bi-weekly knowledge sessions and monthly drinks
-- Developed POC for LLM RAG solution using OpenAI
-- Supervisor for Machine Learning Thesis intern
+#### Consultant Data Science @ Capgemini
+June 2023 – January 2026 
+- Young-Professional event board, responsible for organizing social events, bi-weekly knowledge sessions and monthly drinks
+- Developed POC for closed documents LLM RAG solution using OpenAI at Capgemini AI lab
+- Supervised Machine Learning Thesis intern
 
-### Data Scientist | Yabba Data Doo
-#### February 2023 – March 2023
+### Yabba Data Doo
+#### Data Scientist
+February 2023 – March 2023
 - Empowered sales with live insights using Azure functions and Python API

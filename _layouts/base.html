@@ -14,20 +14,10 @@
         </div>
       </main>
 
-      <aside class="sidebar">
-        
-        <!-- <div class="nav-box">
-          {% for page in site.pages %}
-            {% if page.title %}
-              <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
-            {% endif %}
-          {% endfor %}
-        </div> -->
-        {%- include footer.html -%} <!-- Footer inside sidebar -->
-      </aside>
     </div>
 
     {%- include sub-footer.html -%}
+    {%- include footer.html -%}
     {% include scripts.html %}
 
   </body>
