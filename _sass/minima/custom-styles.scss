@@ -46,6 +46,8 @@ body {
   min-height: 100vh;
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -240,6 +242,28 @@ main.page-content {
   margin: 0;
 }
 
+/* ============================================
+   PROFILE IMAGE
+   ============================================ */
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+  border: 3px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.page-link.home {
+  display: none;
+}
 
 /* ============================================
    RESPONSIVE DESIGN (Mobile & Tablet)
@@ -270,11 +294,9 @@ main.page-content {
 
   .site-title {
     display: none;
-    font-size: 1.625rem;
-    font-weight: 300;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: none;
-    padding: 0;
+  }
+
+  .page-link.home {
+    display: block;
   }
 }

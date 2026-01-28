@@ -10,11 +10,10 @@ I am an experienced Data Scientist with years experience a strong foundation in 
 
 Below is a list of the projects and clients I have worked with.
 
-
 #### Data Scientist @ Nationale-Nederlanden *(via Capgemini)*
 August 2025 - January 2026
-- Created API webapp for insurance claim fraud check on internal and external databases
-- Build batch pipeline  
+- Created API webapp to check potential fraud hit on claim within both internal and external databases
+- Build fraud detection solution for insurance label based on batch processing
 
 #### Data Analyst @ Gemeente Amsterdam *(via Capgemini)*
 September 2024 – July 2025
