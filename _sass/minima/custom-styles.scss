@@ -508,8 +508,8 @@ main.page-content {
    ============================================ */
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  // width: 150px;
+  // height: 150px;
   // border-radius: 50%;
   object-fit: cover;
   display: block;
@@ -518,9 +518,9 @@ main.page-content {
   transition: transform 0.3s ease;
 }
 
-.profile-image:hover {
-  transform: scale(1.05);
-}
+// .profile-image:hover {
+//   transform: scale(1.05);
+// }
 
 .page-link.home {
   display: none;

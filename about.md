@@ -5,21 +5,21 @@ permalink: /about/
 hide_title: true
 ---
 
-![Profile picture]({{ '/assets/images/pixel_me.png' | relative_url }}){: .profile-image }
+![Profile picture]({{ '/assets/images/pixel_banner_me.png' | relative_url }}){: .profile-image }
 
-I started building this site beginning of 2025 because I felt the need to log my progress. With this blog I want to share challenges, interesting topics and personal projects. 
+In 2025 I started keeping track of projects I was doing because I felt the need to log my progress. To share what I have learned, decided to build this site and publish my posts. One of my personal goals for 2026 is to build a product that has a positive impact and track my progress through blogging.
 
-Working as a consultant meant working on various projects with different durations. In most cases, the work you have delivered at a client, remains at the client. To be able to show my professional growth and keep an overview of my deliverables, I decided a blog would be the best format.
+Currently I am working as a Data Science consultant, meaning I work on various projects of different durations and complexities. In most cases, the work you have delivered at a client, remains at the client. To be able to show my professional growth and keep an overview of my deliverables, I decided a blog would be the best format.
 
-Are you interested in learning more about any of the topics I have written about? Feel free to reach out: [dccdelang@outlook.com](mailto:dccdelang@outlook.com)
+In addition to challenges I face at work, I also wanted to start my own personal projects to enable more creativity and broaden my knowledge on new topics, tools and languages. 
+
+Are you interested in learning more about any of the topics I have written about, or just want to connect? Feel free to reach out: [dccdelang@outlook.com](mailto:dccdelang@outlook.com)
 
 ## AI
-The blog posts are written by me, *a human*, the site is build in collaboration with LLM's.
+The blog posts are written by me (*a human*) the site is build in collaboration with LLM's.
 
 ## Privacy
 This site is static and does **not** follow you:\
 ❌ No external analytics services\
-❌ No cookies sent to servers\
 ❌ No user data collection\
-❌ No third-party tracking scripts\
-❌ No API calls that log user behavior
+❌ No third-party tracking scripts
