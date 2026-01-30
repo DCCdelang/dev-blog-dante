@@ -5,7 +5,7 @@ permalink: /about/
 hide_title: true
 ---
 
-![Profile picture](assets\images\deLangDante_realfake_picture.png){: .profile-image }
+![Profile picture]({{ '/assets/images/pixel_me.png' | relative_url }}){: .profile-image }
 
 I started building this site beginning of 2025 because I felt the need to log my progress. With this blog I want to share challenges, interesting topics and personal projects. 
 

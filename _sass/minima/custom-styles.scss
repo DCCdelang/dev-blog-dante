@@ -3,33 +3,62 @@
    ============================================ */
 
 /* ============================================
-   VARIABLES: COLOR SCHEMES
+   VARIABLES: COLOR SCHEMES (90s RETRO LAB)
+   --------------------------------------------
+   Design tokens for a playful 90s-inspired vibe.
+   Tweak these first if you want to change the look.
    ============================================ */
 
 /* Light mode colors */
 [data-color-scheme="light"] {
-  --background-color: #fafaf8;
-  --heading-color: #1a1a1a;
-  --link-color: #0066cc;
-  --link-hover-color: #0052a3;
-  --border-color: #e0e0e0;
-  --title-color: #1a1a1a;
-  --text-color: #333333;
-  --code-bg-color: #f5f5f5;
-  --code-text-color: #2d2d2d;
+  /* Base surfaces */
+  --background-color: #fbf7ff;
+  --surface-color: #ffffff;
+  --surface-elevated: #f3ebff;
+
+  /* Text */
+  --heading-color: #12122a;
+  --title-color: #12122a;
+  --text-color: #26263a;
+
+  /* Accents & borders (neon-inspired but readable) */
+  --accent-pink: #ff4fd8;
+  --accent-cyan: #00d4ff;
+  --accent-yellow: #ffd95e;
+
+  --link-color: var(--accent-cyan);
+  --link-hover-color: #00b0d4;
+  --border-color: #d6c7ff;
+
+  /* Code & terminal feel */
+  --code-bg-color: #f3ebff;
+  --code-text-color: #222244;
 }
 
 /* Dark mode colors (default) */
 [data-color-scheme="dark"] {
-  --background-color: #0f0f0f;
-  --heading-color: #e8e8e8;
-  --link-color: #58a6ff;
-  --link-hover-color: #79c0ff;
-  --border-color: #30363d;
-  --title-color: #e8e8e8;
-  --text-color: #c9d1d9;
-  --code-bg-color: #161b22;
-  --code-text-color: #79c0ff;
+  /* Base surfaces */
+  --background-color: #05051a;
+  --surface-color: #101034;
+  --surface-elevated: #181848;
+
+  /* Text */
+  --heading-color: #f5f1ff;
+  --title-color: #f5f1ff;
+  --text-color: #d6ddff;
+
+  /* Accents & borders */
+  --accent-pink: #ff4fd8;
+  --accent-cyan: #00f0ff;
+  --accent-yellow: #ffe66d;
+
+  --link-color: var(--accent-cyan);
+  --link-hover-color: #8bf6ff;
+  --border-color: #3a3a80;
+
+  /* Code & terminal feel */
+  --code-bg-color: #050513;
+  --code-text-color: #8bf6ff;
 }
 
 /* ============================================
@@ -44,14 +73,42 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--background-color);
+  background: var(--background-color);
   color: var(--text-color);
-  font-family: 'Roboto', sans-serif;
-  font-size: larger;
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: 17px;
+}
+
+/* Subtle background gradients that adapt to theme */
+[data-color-scheme="light"] body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 79, 216, 0.12), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(0, 212, 255, 0.10), transparent 55%),
+    var(--background-color);
+}
+
+[data-color-scheme="dark"] body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 79, 216, 0.18), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(0, 240, 255, 0.16), transparent 55%),
+    var(--background-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
+  letter-spacing: 0.02em;
+}
+
+.retro-body {
+  /* hook class in case you want to scope retro styles later */
+}
+
+.retro-page {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 72px 20px 32px;
 }
 
 /* ============================================
@@ -75,18 +132,18 @@ a {
 .container {
   display: flex;
   gap: 20px;
-  padding-top: 80px;
+  padding-top: 24px;
 }
 
 .main-wrapper {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 24px 40px;
 }
 
 .header-wrapper {
-  max-width: 800px;
-  padding: 0 30px;
+  max-width: 1120px;
+  padding: 0 24px;
 }
 
 .footer-col-wrapper {
@@ -116,25 +173,6 @@ main.page-content {
    HEADER & NAVIGATION
    ============================================ */
 
-.site-header {
-  position: fixed;
-  width: 100%;
-  min-height: 55.95px;
-  line-height: 54px;
-  border-top: none;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--background-color);
-  top: 0;
-  transition: top 0.3s ease-in-out;
-}
-
-.site-header.hide {
-  top: -55.95px;
-}
-
 .site-title {
   color: var(--title-color) !important;
   font-size: 1.625rem;
@@ -146,13 +184,11 @@ main.page-content {
 }
 
 .site-nav {
-  float: right;
-  position: absolute;
-  width: 100%;
-  max-width: 640px;
-  overflow: hidden;
-  flex-direction: column;
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
 }
 
 .nav-box-mobile {
@@ -191,7 +227,8 @@ main.page-content {
   font-size: 12px;
   margin-top: 5px;
   padding-top: 5px;
-  color: #666;
+  color: var(--text-color);
+  opacity: 0.8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,13 +239,111 @@ main.page-content {
   }
 
   a {
-    color: #0077aa;
+    color: var(--link-color);
     text-decoration: none;
 
     &:hover {
+      color: var(--link-hover-color);
       text-decoration: underline;
     }
   }
+}
+
+/* Retro window-style header & footer */
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  min-height: 56px;
+  line-height: 1;
+  border-top: none;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 79, 216, 0.25),
+    rgba(0, 240, 255, 0.12),
+    rgba(255, 214, 94, 0.25)
+  );
+  backdrop-filter: blur(14px);
+  top: 0;
+  transition: top 0.3s ease-in-out, box-shadow 0.2s ease-out;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+.site-header.hide {
+  top: -70px;
+}
+
+/* Ensure header background adapts to theme */
+[data-color-scheme="light"] .site-header {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 79, 216, 0.15),
+    rgba(0, 212, 255, 0.08),
+    rgba(255, 217, 94, 0.15)
+  );
+}
+
+[data-color-scheme="dark"] .site-header {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 79, 216, 0.25),
+    rgba(0, 240, 255, 0.12),
+    rgba(255, 214, 94, 0.25)
+  );
+}
+
+.header-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.retro-header-inner {
+  border-radius: 14px 14px 18px 18px;
+  padding: 10px 18px;
+  background: linear-gradient(180deg, var(--surface-color), var(--surface-elevated));
+  border: 2px solid var(--border-color);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.3),
+    0 10px 22px rgba(0, 0, 0, 0.55);
+}
+
+.retro-header-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.retro-window-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.retro-window-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.retro-window-dot--pink {
+  background-color: var(--accent-pink);
+}
+
+.retro-window-dot--cyan {
+  background-color: var(--accent-cyan);
+}
+
+.retro-window-dot--yellow {
+  background-color: var(--accent-yellow);
 }
 
 /* ============================================
@@ -222,6 +357,118 @@ main.page-content {
   border-bottom: none;
 }
 
+/* Retro card language for home & posts */
+
+.retro-grid {
+  align-items: flex-start;
+}
+
+.retro-card {
+  background: linear-gradient(180deg, var(--surface-color), var(--surface-elevated));
+  border-radius: 18px;
+  border: 2px solid var(--border-color);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.45),
+    0 18px 40px rgba(0, 0, 0, 0.7);
+  padding: 24px 22px 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.retro-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 79, 216, 0.16) 0,
+      rgba(255, 79, 216, 0.16) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  opacity: 0.2;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.retro-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.home.retro-card-list .post-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 28px 0 0;
+}
+
+.home.retro-card-list .post-list li + li {
+  margin-top: 20px;
+}
+
+.home.retro-card-list .post-meta {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-color);
+  opacity: 0.75;
+}
+
+.home.retro-card-list .post-link {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.retro-post-header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.retro-post-header .post-title {
+  font-size: 2.1rem;
+  text-shadow:
+    0 0 6px rgba(0, 240, 255, 0.4),
+    0 0 24px rgba(255, 79, 216, 0.55);
+}
+
+.retro-post-header .post-meta {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.post-categories {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.post-categories a {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-elevated);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-color);
+  transition: background-color 0.2s ease;
+}
+
+.post-categories a:hover {
+  background-color: var(--surface-color);
+}
+
+.post-content {
+  line-height: 1.7;
+}
+
 /* ============================================
    THEME TOGGLE BUTTON
    ============================================ */
@@ -229,17 +476,31 @@ main.page-content {
 .theme-toggle {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
-  padding: 10px;
+  padding: 8px;
   margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-out, filter 0.2s ease-out;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .footer-credits .theme-toggle {
   display: inline-block;
-  font-size: 18px;
-  padding: 0;
   margin: 0;
+  font-size: 1.3rem;
+  padding: 6px;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
 }
 
 /* ============================================
@@ -249,11 +510,11 @@ main.page-content {
 .profile-image {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  // border-radius: 50%;
   object-fit: cover;
   display: block;
   margin: 0 auto 20px;
-  border: 3px solid var(--border-color);
+  // border: 3px solid var(--border-color);
   transition: transform 0.3s ease;
 }
 
@@ -275,21 +536,36 @@ main.page-content {
   }
 
   .page-link {
-    display: block;
-    padding: 1px 15px;
+    padding: 6px 10px;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
+    margin-right: 4px;
+    margin-bottom: 0;
   }
 
   .site-nav {
     display: flex;
     flex-direction: row;
-    right: 0px;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    text-align: center;
+    gap: 4px;
+    background: transparent;
+    padding: 0;
+    width: 100%;
+  }
+
+  .retro-header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .retro-header-titlebar {
+    margin-bottom: 0;
   }
 
   .site-title {
@@ -298,5 +574,219 @@ main.page-content {
 
   .page-link.home {
     display: block;
+  }
+
+  /* Ensure mobile nav links are visible */
+  .site-nav .page-link {
+    color: var(--text-color) !important;
+    background: transparent;
+    border: none;
+    white-space: nowrap;
+  }
+
+  .site-nav .page-link:hover {
+    color: var(--link-hover-color) !important;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  [data-color-scheme="light"] .site-nav .page-link:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .retro-page {
+    padding: 60px 0px;
+  }
+}
+
+/* ============================================
+   LINKS, CODE, & INTERACTIONS
+   ============================================ */
+
+.post-link,
+.page-link {
+  position: relative;
+  transition:
+    color 0.18s ease-out,
+    transform 0.16s ease-out,
+    text-shadow 0.18s ease-out;
+}
+
+.post-link::after,
+.page-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan));
+  transition: width 0.16s ease-out;
+}
+
+.post-link:hover,
+.page-link:hover {
+  transform: translateY(-1px);
+  text-shadow:
+    0 0 6px rgba(0, 240, 255, 0.7),
+    0 0 16px rgba(255, 79, 216, 0.75);
+}
+
+.post-link:hover::after,
+.page-link:hover::after {
+  width: 100%;
+}
+
+pre,
+code {
+  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+pre {
+  background-color: var(--code-bg-color);
+  color: var(--code-text-color);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 14px 16px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.6),
+    0 10px 24px rgba(0, 0, 0, 0.75);
+}
+
+code {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-yellow);
+  outline-offset: 3px;
+}
+
+/* ============================================
+   BACK TO TOP BUTTON (RETRO STYLE)
+   ============================================ */
+
+#back-to-top {
+  background: linear-gradient(180deg, var(--surface-color), var(--surface-elevated)) !important;
+  border: 3px solid var(--accent-cyan) !important;
+  border-radius: 50% !important;
+  box-shadow:
+    0 0 0 2px rgba(0, 0, 0, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 240, 255, 0.7),
+    0 0 40px rgba(0, 240, 255, 0.5),
+    0 0 60px rgba(255, 79, 216, 0.3) !important;
+  color: var(--accent-cyan) !important;
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  width: 64px !important;
+  height: 64px !important;
+  line-height: 64px !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 9999 !important;
+  transition:
+    transform 0.2s ease-out,
+    box-shadow 0.2s ease-out,
+    filter 0.2s ease-out !important;
+  backdrop-filter: blur(10px);
+  position: fixed !important;
+  overflow: hidden;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  opacity: 0.95 !important;
+}
+
+#back-to-top::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 79, 216, 0.15) 0,
+      rgba(255, 79, 216, 0.15) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  opacity: 0.4;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+#back-to-top:hover {
+  transform: translateY(-4px) scale(1.1) !important;
+  opacity: 1 !important;
+  box-shadow:
+    0 0 0 2px rgba(0, 0, 0, 0.7),
+    0 16px 40px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(0, 240, 255, 0.9),
+    0 0 50px rgba(0, 240, 255, 0.7),
+    0 0 80px rgba(255, 79, 216, 0.5) !important;
+  filter: brightness(1.2);
+}
+
+#back-to-top:active {
+  transform: translateY(-2px) scale(1.05) !important;
+}
+
+/* Theme-specific adjustments */
+[data-color-scheme="light"] #back-to-top {
+  box-shadow:
+    0 0 0 2px rgba(0, 0, 0, 0.3),
+    0 8px 24px rgba(0, 0, 0, 0.5),
+    0 0 16px rgba(0, 212, 255, 0.6),
+    0 0 32px rgba(0, 212, 255, 0.4),
+    0 0 48px rgba(255, 79, 216, 0.2) !important;
+}
+
+[data-color-scheme="dark"] #back-to-top {
+  box-shadow:
+    0 0 0 2px rgba(0, 0, 0, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 240, 255, 0.7),
+    0 0 40px rgba(0, 240, 255, 0.5),
+    0 0 60px rgba(255, 79, 216, 0.3) !important;
+}
+
+/* Mobile view - smaller but still visible */
+@media (max-width: 600px) {
+  #back-to-top {
+    width: 48px !important;
+    height: 48px !important;
+    line-height: 48px !important;
+    font-size: 1.5rem !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    border-width: 2px !important;
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.5),
+      0 6px 20px rgba(0, 0, 0, 0.7),
+      0 0 15px rgba(0, 240, 255, 0.6),
+      0 0 30px rgba(0, 240, 255, 0.4),
+      0 0 45px rgba(255, 79, 216, 0.3) !important;
+  }
+
+  #back-to-top:hover {
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.7),
+      0 10px 28px rgba(0, 0, 0, 0.9),
+      0 0 20px rgba(0, 240, 255, 0.8),
+      0 0 40px rgba(0, 240, 255, 0.6),
+      0 0 60px rgba(255, 79, 216, 0.4) !important;
+  }
+
+  [data-color-scheme="light"] #back-to-top {
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.3),
+      0 6px 18px rgba(0, 0, 0, 0.5),
+      0 0 12px rgba(0, 212, 255, 0.5),
+      0 0 24px rgba(0, 212, 255, 0.3),
+      0 0 36px rgba(255, 79, 216, 0.2) !important;
   }
 }
