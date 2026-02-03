@@ -13,7 +13,7 @@ Currently I am working as a Data Science consultant, meaning I work on various p
 
 In addition to challenges I face at work, I also wanted to start my own personal projects to enable more creativity and broaden my knowledge on new topics, tools and languages. 
 
-Are you interested in learning more about any of the topics I have written about, or just want to connect? Feel free to reach out: [dccdelang@outlook.com](mailto:dccdelang@outlook.com)
+Are you interested in learning more about any of the topics I have written about, or just want to connect? Feel free to reach out: moc.kooltuo@gnaledccd.reverse()
 
 ## AI
 The blog posts are written by me (*a human*) the site is build in collaboration with LLM's.
