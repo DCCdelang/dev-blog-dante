@@ -3,62 +3,54 @@
    ============================================ */
 
 /* ============================================
-   VARIABLES: COLOR SCHEMES (90s RETRO LAB)
+   VARIABLES: COLOR SCHEMES (CLEAN / MINIMAL)
    --------------------------------------------
-   Design tokens for a playful 90s-inspired vibe.
-   Tweak these first if you want to change the look.
+   A neutral, readable palette. Tweak these
+   first if you want to change the look.
    ============================================ */
 
 /* Light mode colors */
 [data-color-scheme="light"] {
   /* Base surfaces */
-  --background-color: #fbf7ff;
+  --background-color: #ffffff;
   --surface-color: #ffffff;
-  --surface-elevated: #f3ebff;
+  --surface-elevated: #f6f6f6;
 
   /* Text */
-  --heading-color: #12122a;
-  --title-color: #12122a;
-  --text-color: #26263a;
+  --heading-color: #1a1a1a;
+  --title-color: #1a1a1a;
+  --text-color: #2b2b2b;
 
-  /* Accents & borders (neon-inspired but readable) */
-  --accent-pink: #ff4fd8;
-  --accent-cyan: #00d4ff;
-  --accent-yellow: #ffd95e;
+  /* Links & borders */
+  --link-color: #1a1a1a;
+  --link-hover-color: #555555;
+  --border-color: #e2e2e2;
 
-  --link-color: var(--accent-cyan);
-  --link-hover-color: #00b0d4;
-  --border-color: #d6c7ff;
-
-  /* Code & terminal feel */
-  --code-bg-color: #f3ebff;
-  --code-text-color: #222244;
+  /* Code */
+  --code-bg-color: #f6f6f6;
+  --code-text-color: #1a1a1a;
 }
 
 /* Dark mode colors (default) */
 [data-color-scheme="dark"] {
   /* Base surfaces */
-  --background-color: #05051a;
-  --surface-color: #101034;
-  --surface-elevated: #181848;
+  --background-color: #121212;
+  --surface-color: #181818;
+  --surface-elevated: #1f1f1f;
 
   /* Text */
-  --heading-color: #f5f1ff;
-  --title-color: #f5f1ff;
-  --text-color: #d6ddff;
+  --heading-color: #f2f2f2;
+  --title-color: #f2f2f2;
+  --text-color: #d6d6d6;
 
-  /* Accents & borders */
-  --accent-pink: #ff4fd8;
-  --accent-cyan: #00f0ff;
-  --accent-yellow: #ffe66d;
+  /* Links & borders */
+  --link-color: #f2f2f2;
+  --link-hover-color: #aaaaaa;
+  --border-color: #2c2c2c;
 
-  --link-color: var(--accent-cyan);
-  --link-hover-color: #8bf6ff;
-  --border-color: #3a3a80;
-
-  /* Code & terminal feel */
-  --code-bg-color: #050513;
-  --code-text-color: #8bf6ff;
+  /* Code */
+  --code-bg-color: #1a1a1a;
+  --code-text-color: #e6e6e6;
 }
 
 /* ============================================
@@ -80,28 +72,13 @@ body {
   font-size: 17px;
 }
 
-/* Subtle background gradients that adapt to theme */
-[data-color-scheme="light"] body {
-  background:
-    radial-gradient(circle at top left, rgba(255, 79, 216, 0.12), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(0, 212, 255, 0.10), transparent 55%),
-    var(--background-color);
-}
-
-[data-color-scheme="dark"] body {
-  background:
-    radial-gradient(circle at top left, rgba(255, 79, 216, 0.18), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(0, 240, 255, 0.16), transparent 55%),
-    var(--background-color);
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .retro-body {
-  /* hook class in case you want to scope retro styles later */
+  /* hook class in case you want to scope styles later */
 }
 
 .retro-page {
@@ -249,7 +226,7 @@ main.page-content {
   }
 }
 
-/* Retro window-style header & footer */
+/* Header & footer */
 
 .site-header {
   position: fixed;
@@ -257,44 +234,18 @@ main.page-content {
   min-height: 56px;
   line-height: 1;
   border-top: none;
+  border-bottom: 1px solid var(--border-color);
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: stretch;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 79, 216, 0.25),
-    rgba(0, 240, 255, 0.12),
-    rgba(255, 214, 94, 0.25)
-  );
-  backdrop-filter: blur(14px);
+  background: var(--background-color);
   top: 0;
-  transition: top 0.3s ease-in-out, box-shadow 0.2s ease-out;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08),
-    0 8px 20px rgba(0, 0, 0, 0.45);
+  transition: top 0.3s ease-in-out;
 }
 
 .site-header.hide {
   top: -70px;
-}
-
-/* Ensure header background adapts to theme */
-[data-color-scheme="light"] .site-header {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 79, 216, 0.15),
-    rgba(0, 212, 255, 0.08),
-    rgba(255, 217, 94, 0.15)
-  );
-}
-
-[data-color-scheme="dark"] .site-header {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 79, 216, 0.25),
-    rgba(0, 240, 255, 0.12),
-    rgba(255, 214, 94, 0.25)
-  );
 }
 
 .header-wrapper {
@@ -306,44 +257,13 @@ main.page-content {
 }
 
 .retro-header-inner {
-  border-radius: 14px 14px 18px 18px;
   padding: 10px 18px;
-  background: linear-gradient(180deg, var(--surface-color), var(--surface-elevated));
-  border: 2px solid var(--border-color);
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.3),
-    0 10px 22px rgba(0, 0, 0, 0.55);
 }
 
 .retro-header-titlebar {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.retro-window-dots {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.retro-window-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
-}
-
-.retro-window-dot--pink {
-  background-color: var(--accent-pink);
-}
-
-.retro-window-dot--cyan {
-  background-color: var(--accent-cyan);
-}
-
-.retro-window-dot--yellow {
-  background-color: var(--accent-yellow);
 }
 
 /* ============================================
@@ -357,44 +277,18 @@ main.page-content {
   border-bottom: none;
 }
 
-/* Retro card language for home & posts */
+/* Card language for home & posts */
 
 .retro-grid {
   align-items: flex-start;
 }
 
 .retro-card {
-  background: linear-gradient(180deg, var(--surface-color), var(--surface-elevated));
-  border-radius: 18px;
-  border: 2px solid var(--border-color);
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.45),
-    0 18px 40px rgba(0, 0, 0, 0.7);
+  background: var(--surface-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
   padding: 24px 22px 26px;
   position: relative;
-  overflow: hidden;
-}
-
-.retro-card::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background:
-    repeating-linear-gradient(
-      135deg,
-      rgba(255, 79, 216, 0.16) 0,
-      rgba(255, 79, 216, 0.16) 2px,
-      transparent 2px,
-      transparent 4px
-    );
-  opacity: 0.2;
-  mix-blend-mode: soft-light;
-  pointer-events: none;
-}
-
-.retro-card > * {
-  position: relative;
-  z-index: 1;
 }
 
 .home.retro-card-list .post-list {
@@ -412,7 +306,7 @@ main.page-content {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--text-color);
-  opacity: 0.75;
+  opacity: 0.65;
 }
 
 .home.retro-card-list .post-link {
@@ -423,16 +317,13 @@ main.page-content {
 }
 
 .retro-post-header {
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 14px;
   margin-bottom: 18px;
 }
 
 .retro-post-header .post-title {
   font-size: 2.1rem;
-  text-shadow:
-    0 0 6px rgba(0, 240, 255, 0.4),
-    0 0 24px rgba(255, 79, 216, 0.55);
 }
 
 .retro-post-header .post-meta {
@@ -483,8 +374,7 @@ main.page-content {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease-out, filter 0.2s ease-out;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s ease-out;
 }
 
 .footer-credits .theme-toggle {
@@ -496,7 +386,6 @@ main.page-content {
 
 .theme-toggle:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
 }
 
 .theme-toggle:active {
@@ -508,19 +397,11 @@ main.page-content {
    ============================================ */
 
 .profile-image {
-  // width: 150px;
-  // height: 150px;
-  // border-radius: 50%;
   object-fit: cover;
   display: block;
   margin: 0 auto 20px;
-  // border: 3px solid var(--border-color);
   transition: transform 0.3s ease;
 }
-
-// .profile-image:hover {
-//   transform: scale(1.05);
-// }
 
 .page-link.home {
   display: none;
@@ -586,11 +467,6 @@ main.page-content {
 
   .site-nav .page-link:hover {
     color: var(--link-hover-color) !important;
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  [data-color-scheme="light"] .site-nav .page-link:hover {
-    background: rgba(0, 0, 0, 0.03);
   }
 
   .retro-page {
@@ -605,35 +481,7 @@ main.page-content {
 .post-link,
 .page-link {
   position: relative;
-  transition:
-    color 0.18s ease-out,
-    transform 0.16s ease-out,
-    text-shadow 0.18s ease-out;
-}
-
-.post-link::after,
-.page-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan));
-  transition: width 0.16s ease-out;
-}
-
-.post-link:hover,
-.page-link:hover {
-  transform: translateY(-1px);
-  text-shadow:
-    0 0 6px rgba(0, 240, 255, 0.7),
-    0 0 16px rgba(255, 79, 216, 0.75);
-}
-
-.post-link:hover::after,
-.page-link:hover::after {
-  width: 100%;
+  transition: color 0.18s ease-out;
 }
 
 pre,
@@ -645,148 +493,70 @@ code {
 pre {
   background-color: var(--code-bg-color);
   color: var(--code-text-color);
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid var(--border-color);
   padding: 14px 16px;
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.6),
-    0 10px 24px rgba(0, 0, 0, 0.75);
 }
 
 code {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: var(--code-bg-color);
   padding: 0.1em 0.3em;
   border-radius: 4px;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--accent-yellow);
+  outline: 2px solid var(--link-color);
   outline-offset: 3px;
 }
 
 /* ============================================
-   BACK TO TOP BUTTON (RETRO STYLE)
+   BACK TO TOP BUTTON
    ============================================ */
 
 #back-to-top {
-  background: linear-gradient(180deg, var(--surface-color), var(--surface-elevated)) !important;
-  border: 3px solid var(--accent-cyan) !important;
+  background: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
   border-radius: 50% !important;
-  box-shadow:
-    0 0 0 2px rgba(0, 0, 0, 0.5),
-    0 10px 30px rgba(0, 0, 0, 0.8),
-    0 0 20px rgba(0, 240, 255, 0.7),
-    0 0 40px rgba(0, 240, 255, 0.5),
-    0 0 60px rgba(255, 79, 216, 0.3) !important;
-  color: var(--accent-cyan) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  color: var(--text-color) !important;
   font-size: 2rem !important;
   font-weight: bold !important;
-  width: 64px !important;
-  height: 64px !important;
-  line-height: 64px !important;
+  width: 56px !important;
+  height: 56px !important;
+  line-height: 56px !important;
   bottom: 24px !important;
   right: 24px !important;
   z-index: 9999 !important;
   transition:
     transform 0.2s ease-out,
-    box-shadow 0.2s ease-out,
-    filter 0.2s ease-out !important;
-  backdrop-filter: blur(10px);
+    box-shadow 0.2s ease-out !important;
   position: fixed !important;
-  overflow: hidden;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
-  opacity: 0.95 !important;
-}
-
-#back-to-top::before {
-  content: "";
-  position: absolute;
-  inset: -20%;
-  background:
-    repeating-linear-gradient(
-      135deg,
-      rgba(255, 79, 216, 0.15) 0,
-      rgba(255, 79, 216, 0.15) 2px,
-      transparent 2px,
-      transparent 4px
-    );
-  opacity: 0.4;
-  mix-blend-mode: soft-light;
-  pointer-events: none;
+  opacity: 0.9 !important;
 }
 
 #back-to-top:hover {
-  transform: translateY(-4px) scale(1.1) !important;
+  transform: translateY(-3px) !important;
   opacity: 1 !important;
-  box-shadow:
-    0 0 0 2px rgba(0, 0, 0, 0.7),
-    0 16px 40px rgba(0, 0, 0, 0.9),
-    0 0 30px rgba(0, 240, 255, 0.9),
-    0 0 50px rgba(0, 240, 255, 0.7),
-    0 0 80px rgba(255, 79, 216, 0.5) !important;
-  filter: brightness(1.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
 }
 
 #back-to-top:active {
-  transform: translateY(-2px) scale(1.05) !important;
-}
-
-/* Theme-specific adjustments */
-[data-color-scheme="light"] #back-to-top {
-  box-shadow:
-    0 0 0 2px rgba(0, 0, 0, 0.3),
-    0 8px 24px rgba(0, 0, 0, 0.5),
-    0 0 16px rgba(0, 212, 255, 0.6),
-    0 0 32px rgba(0, 212, 255, 0.4),
-    0 0 48px rgba(255, 79, 216, 0.2) !important;
-}
-
-[data-color-scheme="dark"] #back-to-top {
-  box-shadow:
-    0 0 0 2px rgba(0, 0, 0, 0.5),
-    0 10px 30px rgba(0, 0, 0, 0.8),
-    0 0 20px rgba(0, 240, 255, 0.7),
-    0 0 40px rgba(0, 240, 255, 0.5),
-    0 0 60px rgba(255, 79, 216, 0.3) !important;
+  transform: translateY(-1px) !important;
 }
 
 /* Mobile view - smaller but still visible */
 @media (max-width: 600px) {
   #back-to-top {
-    width: 48px !important;
-    height: 48px !important;
-    line-height: 48px !important;
+    width: 44px !important;
+    height: 44px !important;
+    line-height: 44px !important;
     font-size: 1.5rem !important;
     bottom: 20px !important;
     right: 20px !important;
-    border-width: 2px !important;
-    box-shadow:
-      0 0 0 1px rgba(0, 0, 0, 0.5),
-      0 6px 20px rgba(0, 0, 0, 0.7),
-      0 0 15px rgba(0, 240, 255, 0.6),
-      0 0 30px rgba(0, 240, 255, 0.4),
-      0 0 45px rgba(255, 79, 216, 0.3) !important;
-  }
-
-  #back-to-top:hover {
-    box-shadow:
-      0 0 0 1px rgba(0, 0, 0, 0.7),
-      0 10px 28px rgba(0, 0, 0, 0.9),
-      0 0 20px rgba(0, 240, 255, 0.8),
-      0 0 40px rgba(0, 240, 255, 0.6),
-      0 0 60px rgba(255, 79, 216, 0.4) !important;
-  }
-
-  [data-color-scheme="light"] #back-to-top {
-    box-shadow:
-      0 0 0 1px rgba(0, 0, 0, 0.3),
-      0 6px 18px rgba(0, 0, 0, 0.5),
-      0 0 12px rgba(0, 212, 255, 0.5),
-      0 0 24px rgba(0, 212, 255, 0.3),
-      0 0 36px rgba(255, 79, 216, 0.2) !important;
   }
 }

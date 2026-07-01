@@ -41,11 +41,13 @@ minima:
   # be rendered.
   nav_pages:
     - about.md
+    - books.md
     - categories.md
     - CV.md
 
   header_pages:
     - about.md
+    - books.md
     - categories.md
     - CV.md
 
