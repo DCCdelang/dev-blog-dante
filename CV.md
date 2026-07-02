@@ -6,9 +6,16 @@ hide_title: true
 published: True
 ---
 
-I am an experienced Data Scientist with years experience a strong foundation in AI and BI. My experience in consulting helps me to quickly identify problems and align solutions with stakeholder needs. As a natural connector, I enjoy bringing people together. I’m passionate about collaborative problem-solving, continuous learning, and professional growth.
+As a data enthusiast with 3+ years experience on Data Science and Engineering topics, I am currently learning a lot about solution architecture.
+
+My experience in consulting helps me to quickly identify problems and align solutions with stakeholder needs. As a natural connector, I enjoy bringing people together. I’m passionate about collaborative problem-solving, continuous learning, and professional growth.
 
 Below is a list of the projects and clients I have worked with.
+
+#### Data Scientist @ Allianz *(via Machine Learning Reply)*
+February 2026 - Present
+- Supporting various OE's on Databricks setup and connectivity topics
+- Developed multiple PoC's and hosted skill-up for 300+ colleagues
 
 #### Data Scientist @ Nationale-Nederlanden *(via Capgemini)*
 August 2025 - January 2026
